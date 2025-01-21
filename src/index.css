@@ -6,3 +6,6 @@
 *{
   font-family: "Poppins", serif;
 }
+input::placeholder{
+  color: #333333;
+}

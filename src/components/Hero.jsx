@@ -11,6 +11,7 @@ const Hero = () => {
     const [text, setText] = useState("HIT ME HARD AND SOFT")
     const [alphaText, setAlphaText] = useState()
     const navigate = useNavigate()
+    
     const handleDomainChange = (newDomain) => {
         navigate(`?value=${newDomain}`);
         setText(`HIT ME HARD AND ${newDomain.toUpperCase()}`)
@@ -27,7 +28,7 @@ const Hero = () => {
                         <CustomButton customOnClick={() => handleDomainChange("all")} myClass="!text-xs px-[13.48px] py-[5.84px] !bg-black text-white hover:text-black hover:!bg-transparent" text="All" />
                         <CustomButton customOnClick={() => handleDomainChange("pop")} myClass="!text-xs text-customBlack py-[5.84px] px-[11.37px] hover:!bg-customBlack hover:text-white" text="Pop" />
                         <CustomButton customOnClick={() => handleDomainChange("rock")} myClass="!text-xs text-customBlack py-[5.84px] px-[11.8px] hover:!bg-customBlack hover:text-white" text="Rock" />
-                        <CustomButton customOnClick={() => handleDomainChange("music")} myClass="!text-xs text-customBlack py-[5.84px] px-[16.7px] hover:!bg-customBlack hover:text-white group flex items-center gap-[5px]" text="More" icon={<DownArrow myClass="group-hover:stroke-white transition-all duration-300" />} />
+                        <CustomButton customOnClick={() => handleDomainChange("music")} myClass="!text-xs text-customBlack py-[5.84px] px-[9.2px] hover:!bg-customBlack hover:text-white group flex items-center gap-[5px]" text="More" icon={<DownArrow myClass="group-hover:stroke-white transition-all duration-300" />} />
                     </div>
                     <div className='flex items-center gap-[2px]'>
                         {ALPHABET_LIST.map(function (item, index) {
@@ -42,7 +43,7 @@ const Hero = () => {
                         <img src={profile} alt="profile" className='size-[206px] max-lg:size-32 max-sm:size-20 pointer-events-none' />
                         <div>
                             <p className='font-semibold text-[32px] max-lg:text-2xl leading-[42px] text-white max-sm:text-lg'>Billie Eilish {alphaText}</p>
-                            <p className='font-montserrat font-medium text-base leading-5 text-white pt-[5px] max-lg:pt-0 pb-[21px] max-sm:text-sm'>Relesed May 17, 2024</p>
+                            <p className='font-montserrat font-medium text-base leading-5 text-darkGray pt-[5px] max-lg:pt-0 pb-[21px] max-sm:text-sm'>Relesed May 17, 2024</p>
                         </div>
                     </div>
                 </div>
