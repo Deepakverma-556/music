@@ -8,12 +8,10 @@ import { DownArrow } from '../utils/icons'
 import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
-    const [domain, setDomain] = useState(null);
     const [text, setText] = useState("HIT ME HARD AND SOFT")
     const [alphaText, setAlphaText] = useState()
     const navigate = useNavigate()
     const handleDomainChange = (newDomain) => {
-        setDomain(newDomain);
         navigate(`?value=${newDomain}`);
         setText(`HIT ME HARD AND ${newDomain.toUpperCase()}`)
     };
