@@ -5,20 +5,14 @@ import { ALPHABET_LIST } from '../utils/helper'
 import hero from '../assets/images/webp/hero.webp'
 import profile from '../assets/images/webp/profile.webp'
 import { DownArrow } from '../utils/icons'
-import { useParams, useSearchParams } from 'react-router-dom'
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 
 const Hero = () => {
-    let {id} = useParams()
     const [activeParams, setActiveParams] = useSearchParams('value')
-    const category = activeParams.get('category') || 'All'
     const value = activeParams.get('value')?.toUpperCase()
 
     const handleDomainChange = (value) => {
         setActiveParams({ value: value.toLowerCase() })
-    }
-
-    const handleCategoryChange = (category) => {
-        setActiveParams({ id, category: category.toLowerCase() })
     }
 
     return (
@@ -27,14 +21,14 @@ const Hero = () => {
             <div className='max-w-[1160px] mx-auto px-4'>
                 <div className='flex items-center gap-[15px] pt-[17px] max-xl:overflow-x-auto pb-2'>
                     <div className='flex items-center gap-[5px]'>
-                        <CustomButton onClick={() => handleCategoryChange('All')} myClass={`!text-xs px-[13.48px] py-[5.84px] hover:!bg-customBlack hover:text-white`} text="All" />
-                        <CustomButton onClick={() => handleCategoryChange('Pop')} myClass={`!text-xs text-customBlack py-[5.84px] px-[11.37px] hover:!bg-customBlack hover:text-white`} text="Pop" />
-                        <CustomButton onClick={() => handleCategoryChange('Rock')} myClass={`!text-xs text-customBlack py-[5.84px] px-[11.8px] hover:!bg-customBlack hover:text-white`} text="Rock" />
-                        <CustomButton onClick={() => handleCategoryChange('More')} myClass={`!text-xs text-customBlack py-[5.84px] px-[9.2px] hover:!bg-customBlack hover:text-white group flex items-center gap-[5px]`} text="More" icon={<DownArrow myClass={`group-hover:stroke-white transition-all duration-300`} />} />
+                        <CustomButton myClass={`!text-xs px-[13.48px] py-[5.84px] hover:!bg-customBlack hover:text-white`} text="All" />
+                        <CustomButton myClass={`!text-xs text-customBlack py-[5.84px] px-[11.37px] hover:!bg-customBlack hover:text-white`} text="Pop" />
+                        <CustomButton myClass={`!text-xs text-customBlack py-[5.84px] px-[11.8px] hover:!bg-customBlack hover:text-white`} text="Rock" />
+                        <CustomButton myClass={`!text-xs text-customBlack py-[5.84px] px-[9.2px] hover:!bg-customBlack hover:text-white group flex items-center gap-[5px]`} text="More" icon={<DownArrow myClass={`group-hover:stroke-white transition-all duration-300`} />} />
                     </div>
                     <div className='flex items-center gap-[2px]'>
                         {ALPHABET_LIST.map(function (item, index) {
-                            return <p onClick={() => handleDomainChange(item)} key={index} className={`flex items-center hover:bg-customBlack size-[29px] justify-center rounded-full transition-all duration-300 hover:text-white hover:font-medium text-black text-xs leading-[18px]`}>{item}</p>
+                            return <p onClick={() => handleDomainChange(item)} key={index} className={`${activeParams.get('value') === item.toLowerCase() ? "bg-black text-white" : ""} flex items-center cursor-pointer hover:bg-customBlack size-[29px] justify-center rounded-full transition-all duration-300 hover:text-white hover:font-medium text-black text-xs leading-[18px]`}>{item}</p>
                         })}
                     </div>
                 </div>

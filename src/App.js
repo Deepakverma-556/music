@@ -6,7 +6,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/all/:id' element={<Hero/>} />
+        <Route path='/' element={<Hero/>} />
+        <Route path='/:id' element={<Hero/>} />
       </Routes>
     </BrowserRouter>
   );
