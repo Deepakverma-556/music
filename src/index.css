@@ -9,3 +9,10 @@
 input::placeholder{
   color: #333333;
 }
+
+select {
+  background-image: url("./assets/images/svg/drop-down.svg") !important;
+  background-position: right 9px top 50%;
+  background-size: 0.65rem auto;
+  background-repeat: no-repeat;
+}
