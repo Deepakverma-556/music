@@ -80,7 +80,7 @@ export const FOOTER_LYRICS_LIST = [
     },
     {
         title: "Contact us",
-        link:"#contact"
+        link:"tel:"
     },
     {
         title: "Press",

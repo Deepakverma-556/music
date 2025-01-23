@@ -18,9 +18,9 @@ const Songs = () => {
         setActiveParams({ value: value.toLowerCase() })
     }
     return (
-        <div className='pt-[60px] max-sm:pt-5'>
-            <div className='max-w-[1160px] mx-auto px-4 flex gap-[51px] max-md:gap-6 items-center max-md:flex-wrap'>
-                <div className='w-full'>
+        <div id='top' className='pt-[60px] max-sm:pt-5'>
+            <div id='playlist' className='max-w-[1160px] mx-auto px-4 flex gap-[51px] max-md:gap-6 items-center max-md:flex-wrap'>
+                <div id='about' className='w-full'>
                     <h2 className='font-semibold text-5xl leading-[58.45px] pb-[29px] max-lg:text-4xl max-sm:text-3xl'>Songs</h2>
                     <div className='overflow-x-auto'>
                         <table className='w-full max-[460px]:min-w-[427px] min-w-[427px] overflow-x-auto'>
@@ -49,7 +49,7 @@ const Songs = () => {
                     {images ? <div><img src={images} alt="images" /><button onClick={deleteImage} className='absolute top-4 right-4 text-white'>X</button></div> : <label className='cursor-pointer absolute flex justify-center items-center w-full h-full text-center rounded-[20px] text-sm leading-6 bg-sky text-white ' htmlFor="image">Add Place</label>}
                 </div>
             </div>
-            <div className='border-t border-gray border-b pt-[42px] pb-[37px] flex mt-[30px] overflow-x-auto max-md:py-5 max-sm:py-3'>
+            <div id='latest-news' className='border-t border-gray border-b pt-[42px] pb-[37px] flex mt-[30px] overflow-x-auto max-md:py-5 max-sm:py-3'>
                 <div className='flex gap-[2px] mx-auto'>
                     {ALPHABET_LIST.map(function (item, index) {
                         return <p onClick={() => handleDomainChange(item)} key={index} className={`${activeParams.get('value') === item.toLowerCase() ? "bg-black text-white" : ""} flex items-center cursor-pointer hover:bg-customBlack size-[29px] justify-center rounded-full transition-all duration-300 hover:text-white hover:font-medium text-black text-xs leading-[18px]`}>{item}</p>

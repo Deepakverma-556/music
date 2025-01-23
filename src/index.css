@@ -10,6 +10,7 @@
 html,
 body {
   background: #FAFAFF;
+  scroll-behavior: smooth;
 }
 
 input::placeholder {
