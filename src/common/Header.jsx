@@ -15,12 +15,15 @@ const Header = () => {
                     <input type="text" placeholder='What do you feel like listening to right now ?' className='w-[95%] px-[30px] pt-[13px] pb-[14px] outline-none text-sm leading-6' />
                     <CustomButton icon={<Search myClass="transition-all duration-300 group-hover:fill-black" />} myClass="group flex items-center justify-center hover:!bg-white !rounded-full py-[10.34px] px-[10.34px] !bg-customBlack" />
                 </form>
-                <CustomButton icon={<Search myClass="transition-all duration-300 group-hover:fill-black" />} myClass="flex group hover:!bg-white items-center md:hidden justify-center !rounded-full !py-[10.34px] !px-[10.34px] !bg-customBlack" />
                 <div className='flex items-center gap-5 max-sm:gap-2'>
                     <CustomButton text="Login" myClass="!border-none text-customBlack !font-normal hover:!text-blue-400" />
                     <CustomButton text="Sign Up" myClass="!bg-customBlack px-[25px] py-[9px] text-white hover:!bg-transparent hover:text-black" />
                 </div>
             </div>
+            <form onSubmit={handleSubmit} className='border border-gray md:hidden bg-white w-full rounded-full flex items-center pr-[7px] overflow-hidden max-md:mt-1'>
+                <input type="text" placeholder='What do you feel like listening to right now ?' className='w-[95%] px-[30px] max-md:px-4 pt-[13px] pb-[14px] max-md:py-3 outline-none text-sm leading-6' />
+                <CustomButton icon={<Search myClass="transition-all duration-300 group-hover:fill-black" />} myClass="group flex items-center justify-center hover:!bg-white !rounded-full !p-[10.34px] max-sm:!p-2 !bg-customBlack" />
+            </form>
         </div>
     )
 }

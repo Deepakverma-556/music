@@ -34,11 +34,11 @@ const Hero = () => {
         <div id='home' className='pt-[10px] pb-10'>
             <Header />
             <div className='max-w-[1160px] mx-auto px-4'>
-                <div id='top-alubms' className='flex items-center gap-[15px] pt-[17px] max-xl:overflow-x-auto pb-2'>
+                <div id='top-alubms' className='flex items-center gap-[15px] pt-[17px] max-xl:overflow-x-auto scroll-bar pb-2'>
                     <div id='add-song' className='flex items-center gap-[5px]'>
-                        <CustomButton customOnClick={() => handleChange("all")} myClass={`${selectId === "all" ? "bg-black text-white" : ""} !text-xs px-[13.48px] py-[5.84px] hover:!bg-customBlack hover:text-white`} text="All" />
-                        <CustomButton customOnClick={() => handleChange("pop")} myClass={`${selectId === "pop" ? "bg-black text-white" : ""} !text-xs text-customBlack py-[5.84px] px-[11.37px] hover:!bg-customBlack hover:text-white`} text="Pop" />
-                        <CustomButton customOnClick={() => handleChange("rock")} myClass={`${selectId === "rock" ? "bg-black text-white" : ""} !text-xs text-customBlack py-[5.84px] px-[11.8px] hover:!bg-customBlack hover:text-white`} text="Rock" />
+                        <CustomButton customOnClick={() => handleChange("all")} myClass={`${selectId === "all" ? "bg-black text-white" : ""} !text-xs px-[13.48px] py-[5.84px] hover:!bg-darkGray hover:text-black`} text="All" />
+                        <CustomButton customOnClick={() => handleChange("pop")} myClass={`${selectId === "pop" ? "bg-black text-white" : ""} !text-xs text-customBlack py-[5.84px] px-[11.37px] hover:!bg-darkGray hover:text-black`} text="Pop" />
+                        <CustomButton customOnClick={() => handleChange("rock")} myClass={`${selectId === "rock" ? "bg-black text-white" : ""} !text-xs text-customBlack py-[5.84px] px-[11.8px] hover:!bg-darkGray hover:text-black`} text="Rock" />
                         <select value={selectId} onChange={handleSelectChange} className={`${selectId === "lofi" || selectId === "song" || selectId === "more" ? "bg-black text-white" : ""} outline-none !text-xs text-customBlack py-[5.84px] !pl-[9.2px] !pr-[22.15px] cursor-pointer border appearance-none border-black rounded-[9px] font-medium max-sm:px-3 max-sm:py-2`}>
                             <option value="more">More</option>
                             <option value="lofi">Lofi</option>
@@ -47,7 +47,7 @@ const Hero = () => {
                     </div>
                     <div className='flex items-center gap-[2px]'>
                         {ALPHABET_LIST.map(function (item, index) {
-                            return <p onClick={() => handleDomainChange(item)} key={index} className={`${activeParams.get('value') === item.toLowerCase() ? "bg-black text-white" : ""} flex items-center cursor-pointer hover:bg-customBlack size-[29px] justify-center rounded-full transition-all duration-300 hover:text-white hover:font-medium text-black text-xs leading-[18px]`}>{item}</p>
+                            return <p onClick={() => handleDomainChange(item)} key={index} className={`${activeParams.get('value') === item.toLowerCase() ? "bg-black text-white" : ""} flex items-center cursor-pointer hover:bg-darkGray hover:text-black size-[29px] justify-center rounded-full transition-all duration-300 hover:font-medium text-black text-xs leading-[18px]`}>{item}</p>
                         })}
                     </div>
                 </div>

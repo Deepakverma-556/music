@@ -49,10 +49,10 @@ const Songs = () => {
                     {images ? <div><img src={images} alt="images" /><button onClick={deleteImage} className='absolute top-4 right-4 text-white'>X</button></div> : <label className='cursor-pointer absolute flex justify-center items-center w-full h-full text-center rounded-[20px] text-sm leading-6 bg-sky text-white ' htmlFor="image">Add Place</label>}
                 </div>
             </div>
-            <div id='latest-news' className='border-t border-gray border-b pt-[42px] pb-[37px] flex mt-[30px] overflow-x-auto max-md:py-5 max-sm:py-3'>
+            <div id='latest-news' className='border-t border-gray border-b pt-[42px] pb-[37px] flex mt-[30px] scroll-bar overflow-x-auto max-md:py-5 max-sm:py-3'>
                 <div className='flex gap-[2px] mx-auto'>
                     {ALPHABET_LIST.map(function (item, index) {
-                        return <p onClick={() => handleDomainChange(item)} key={index} className={`${activeParams.get('value') === item.toLowerCase() ? "bg-black text-white" : ""} flex items-center cursor-pointer hover:bg-customBlack size-[29px] justify-center rounded-full transition-all duration-300 hover:text-white hover:font-medium text-black text-xs leading-[18px]`}>{item}</p>
+                        return <p onClick={() => handleDomainChange(item)} key={index} className={`${activeParams.get('value') === item.toLowerCase() ? "bg-black text-white" : ""} flex items-center cursor-pointer hover:bg-darkGray size-[29px] justify-center rounded-full transition-all duration-300 hover:text-black hover:font-medium text-black text-xs leading-[18px]`}>{item}</p>
                     })}
                 </div>
             </div>

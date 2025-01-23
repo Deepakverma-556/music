@@ -35,11 +35,11 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className='w-[31.5%] max-sm:w-1/2 max-[500px]:w-2/3 max-sm:mx-auto px-3 lg:pr-[39px] lg:-mt-4 max-sm:pt-6'>
-            <ul>
-              <li className='font-semibold text-sm leading-6 text-customBlack pb-[26px] max-md:pb-5 max-sm:pb-3'>Follow us</li>
+          <div className='w-[31.5%] max-sm:w-1/2 max-[500px]:w-2/3 px-3 lg:pr-[39px] lg:-mt-4 max-sm:pt-6'>
+            <p className='font-semibold text-sm leading-6 text-customBlack pb-[26px] max-md:pb-5 max-sm:pb-3'>Follow us</p>
+            <ul className='max-sm:flex gap-4'>
               {FOOTER_FOLLOW_US_LIST.map(function (item, i) {
-                return <li key={i} className='pb-[14px] max-sm:pb-2'><a target='blank' href={item.link} className='flex items-center group w-full font-semibold text-sm leading-6 text-customBlack justify-between pt-[11px] pb-3 pr-[14.46px] pl-[25px] rounded-[10px] bg-white max-sm:text-xs max-sm:py-2 max-sm:px-3'><span className='group-hover:text-blue-400 transition-all duration-300'>{item.title}</span><span>{item.icon}</span></a></li>
+                return <li key={i} className='pb-[14px] max-sm:pb-2'><a target='blank' href={item.link} className='flex items-center group w-full font-semibold text-sm leading-6 text-customBlack max-sm:max-w-max justify-between sm:pt-[11px] sm:pb-3 sm:pr-[14.46px] sm:pl-[25px] rounded-[10px] sm:bg-white'><span className='group-hover:text-blue-400 transition-all duration-300 max-sm:hidden'>{item.title}</span><span>{item.icon}</span></a></li>
               })}
             </ul>
           </div>
@@ -47,8 +47,8 @@ const Footer = () => {
       </div>
       <div className='border-t border-gray mt-[75px] max-md:mt-14 max-sm:mt-9'></div>
       <div className='max-w-[1160px] px-4 mx-auto flex max-sm:flex-wrap sm:gap-5 justify-between items-center pt-[31px] pb-[30px] max-md:py-6 max-sm:py-4'>
-        <p className='text-sm leading-6 text-customBlack max-sm:text-xs'>All rights reserved to Global Media Holdings Ltd. {year}</p>
-        <div className='flex items-center gap-[41px] max-md:gap-5 max-sm:pt-2 max-sm:justify-between max-sm:w-full'>
+        <p className='text-sm leading-6 max-sm:text-center max-sm:w-full text-customBlack max-sm:text-xs'>All rights reserved to Global Media Holdings Ltd. {year}</p>
+        <div className='flex items-center gap-[41px] max-md:gap-5 max-sm:pt-2 max-sm:mx-auto'>
           <a href="#privacy" className='text-sm leading-6 text-customBlack max-sm:text-xs hover:text-blue-400 transition-all duration-300'>Privacy Policy</a>
           <a href="#privacy" className='text-sm leading-6 text-customBlack max-sm:text-xs hover:text-blue-400 transition-all duration-300'>Terms of Use</a>
         </div>
