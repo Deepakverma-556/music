@@ -15,8 +15,12 @@ module.exports = {
       colors: {
         gray: "#DBDBF3",
         lightGray: "#31374D1A",
-        darkGray:"#CECECE",
-        customBlack:"#14191C"
+        darkGray: "#CECECE",
+        customBlack: "#14191C",
+        darkBlue: "#2E2F37",
+        customGray: "#9F9DAB",
+        customLightGray: "#333333",
+        sky:"#007BFF"
       }
     },
   },
