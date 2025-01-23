@@ -16,7 +16,7 @@ const BackToTop = () => {
     return (
         <>
             {scrollTop && (
-                <div onClick={scrollHandler} className='fixed z-30 right-2.5 bottom-2.5 bg-gradient-to-r from-purple to-darkPurple cursor-pointer animate-bounce size-7 border border-black rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-[0px_0px_22px_3px] hover:shadow-black'><TopArrow /></div>
+                <div onClick={scrollHandler} className='fixed z-30 right-2.5 bottom-2.5 bg-gradient-to-r from-purple to-darkPurple cursor-pointer animate-bounce size-12 max-2xl:size-9 max-sm:size-7 border border-black rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-[0px_0px_22px_3px] hover:shadow-black'><TopArrow /></div>
             )
             }
         </>
