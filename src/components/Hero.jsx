@@ -58,7 +58,7 @@ const Hero = () => {
                         <img src={profile} alt="profile" className='size-[206px] max-lg:size-32 max-sm:size-20 pointer-events-none' />
                         <div>
                             <p className='font-semibold text-[32px] max-lg:text-2xl leading-[42px] text-white max-sm:text-lg'>Billie Eilish {value}</p>
-                            <p className='font-montserrat font-medium text-base leading-5 text-darkGray pt-[5px] max-lg:pt-0 pb-[21px] max-sm:text-sm'>Relesed May 17, 2024</p>
+                            <p className='font-montserrat font-medium text-base leading-5 text-darkGray pt-[5px] max-lg:pt-0 pb-[21px] max-sm:text-sm'>Released May 17, 2024</p>
                         </div>
                     </div>
                 </div>
